@@ -33,7 +33,23 @@ sudo apt install -y \
   network-manager-gnome xinput xrandr feh redshift \
   pulseaudio-utils brightnessctl alacritty rofi \
   flameshot xclip pavucontrol pamixer \
-  zsh-syntax-highlighting zsh-autosuggestions
+  zsh-syntax-highlighting zsh-autosuggestions \
+  alacritty rofi
+```
+
+Remove GNOME:
+
+```bash
+sudo apt remove -y \
+sudo apt purge gnome-shell gdm3 ubuntu-desktop \
+sudo apt autoremove --purge
+```
+
+i3 in x:
+
+```bash
+echo 'exec i3' > ~/.xinitrc
+chmod +x ~/.xinitrc
 ```
 
 ### Fonts
