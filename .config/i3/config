@@ -213,7 +213,7 @@ mode "resize" {
 bindsym Mod1+c mode "resize"
 bindsym Insert exec "flameshot gui -r | xclip -selection clipboard -target image/png -in"
 
+# auto workspace maker script
+bindsym KP_Home exec --no-startup-id /home/sansforensics/code/auto-workspace-setup/setup-i3-workspaces.sh
 
-
-for_window [class="Termite"] floating enable
 

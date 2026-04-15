@@ -258,8 +258,9 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 # nvim
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 export PATH="$PATH:/etc"
+export PATH="$HOME/nvim-linux-x86_64/bin:$PATH"
 
 # start i3 on login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
@@ -267,3 +268,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+export XDG_CURRENT_DESKTOP=i3
+export DESKTOP_SESSION=i3

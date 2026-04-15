@@ -1,7 +1,7 @@
 #!/bin/sh
 
-BAR_HEIGHT=40  # polybar height
-BORDER_SIZE=1  # border size from your wm settings
+BAR_HEIGHT=0  # polybar height
+BORDER_SIZE=0  # border size from your wm settings
 YAD_WIDTH=222  # 222 is minimum possible value
 YAD_HEIGHT=193 # 193 is minimum possible value
 DATE="$(date +"%A %m/%d/%Y %I:%M %p")"
@@ -26,7 +26,7 @@ case "$1" in
 
     # Y
     if [ "$Y" -gt "$((HEIGHT / 2))" ]; then #Bottom
-        : $((pos_y = HEIGHT - YAD_HEIGHT - BAR_HEIGHT - BORDER_SIZE))
+        : $((pos_y = HEIGHT - YAD_HEIGHT - BORDER_SIZE))
     else #Top
         : $((pos_y = BAR_HEIGHT + BORDER_SIZE))
     fi
